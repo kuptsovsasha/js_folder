@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Retire Calculator</title>
+</head>
+<body>
+    <h1>Calculate Time Until Retirement</h1>
+    <button type="button" onclick="calculateTimeUntilRetire();">Calculate Time</button>
+
+    <script>
+        function calculateTimeUntilRetire(){
+            const retireAge = 65
+            const currentYear = new Date().getFullYear();
+
+            let inputValue = prompt("Write your current age.");
+            if (inputValue <= 0)
+                return alert("You should add valid age!")
+            if (inputValue >= 65)
+                return alert("You already retire!")
+
+            let yearsToRetirement = retireAge - inputValue;
+            let retireYear = currentYear + yearsToRetirement;
+
+            return alert(`You retire through ${yearsToRetirement} years in ${retireYear}`);
+        }
+    </script>
+</body>
+</html>

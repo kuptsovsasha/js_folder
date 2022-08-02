@@ -9,21 +9,20 @@
 </head>
 <body>
     <h1>Calculate Area of Circle</h1>
-<!--    <input type="text" placeholder="Add circle radius..." id="myInput">-->
     <button type="button" onclick="calculateAreaOfCircle();">Calculate Area</button>
 
-<script src="first_ticket.js">
+<script>
     function calculateAreaOfCircle(){
         const pNumber = 3.14159265
 
-        // let inputValue = document.getElementById("myInput").value;
         let inputValue = prompt("Add circle radius");
+        if (inputValue <= 0 || inputValue.includes(','))
+            return alert("You should add valid number!")
 
-        let calculatedArea = (inputValue ** 2) * pNumber
+        let calculatedArea = (inputValue ** 2) * pNumber;
 
-        alert(calculatedArea);
+        return alert(calculatedArea);
     }
-
 </script>
 </body>
 </html>
