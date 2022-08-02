@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculate area</title>
+</head>
+<body>
+    <h1>Calculate Area of Circle</h1>
+<!--    <input type="text" placeholder="Add circle radius..." id="myInput">-->
+    <button type="button" onclick="calculateAreaOfCircle();">Calculate Area</button>
+
+<script src="first_ticket.js">
+    function calculateAreaOfCircle(){
+        const pNumber = 3.14159265
+
+        // let inputValue = document.getElementById("myInput").value;
+        let inputValue = prompt("Add circle radius");
+
+        let calculatedArea = (inputValue ** 2) * pNumber
+
+        alert(calculatedArea);
+    }
+
+</script>
+</body>
+</html>
