@@ -14,9 +14,12 @@
     <script>
         function getReversedNumber(){
 
-            let inputValue = String(prompt("Write your number."));
-
-            return alert(inputValue.split('').reverse().join(''));
+            let inputValue = String(prompt("Write your number. The number should be three-digit"));
+            if (inputValue.length !== 3){
+                return alert("The number should be three-digit");
+            } else {
+                return alert(inputValue.split('').reverse().join(''));
+            }
         }
     </script>
 

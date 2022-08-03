@@ -17,15 +17,16 @@
             const currentYear = new Date().getFullYear();
 
             let inputValue = prompt("Write your current age.");
-            if (inputValue <= 0)
-                return alert("You should add valid age!")
-            if (inputValue >= 65)
-                return alert("You already retire!")
-
+            if (inputValue <= 0) {
+                return alert("You should add valid age!");
+            }
+            if (inputValue >= 65) {
+                return alert("You already retire!");
+            }
             let yearsToRetirement = retireAge - inputValue;
             let retireYear = currentYear + yearsToRetirement;
 
-            return alert(`You retire through ${yearsToRetirement} years in ${retireYear}`);
+            return alert(`You will retire after ${yearsToRetirement} years in ${retireYear}`);
         }
     </script>
 </body>

@@ -16,9 +16,9 @@
         const pNumber = 3.14159265
 
         let inputValue = prompt("Add circle radius");
-        if (inputValue <= 0 || inputValue.includes(','))
-            return alert("You should add valid number!")
-
+        if (inputValue <= 0 || inputValue.includes(',')) {
+            return alert("You should add valid number!");
+        }
         let calculatedArea = (inputValue ** 2) * pNumber;
 
         return alert(calculatedArea);
