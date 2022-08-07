@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lucky Ticket Checker</title>
+</head>
+<body>
+    <input type="text" placeholder="Type ticket number" id="ticket">
+    <button type="button" onclick="luckyTicketChecker();">Check if I am lucky </button>
+
+    <script>
+        function luckyTicketChecker(){
+
+            let ticketNumber = document.getElementById("ticket").value;
+            if (isNaN(ticketNumber) || ticketNumber.length !== 6) {
+                return alert("You type wrong number. The number should include only digits and be 6-digit")
+            }
+            let sum_of_first_3 = 0;
+            let sum_of_last_3 = 0;// В даному випадку я перебераю індекси в циклі. Чи є можливість переберати значення?
+            for (let i in ticketNumber) {
+                if (i < 3){
+                    sum_of_first_3 += Number(ticketNumber[i]);// Чи можу я привести стрінгу до інти ще в якиїсь сопосіб?
+                } else {
+                    sum_of_last_3 += Number(ticketNumber[i]);
+                }
+            }
+            if(sum_of_first_3 === sum_of_last_3){
+                alert("You are lucky!");
+            } else {
+                alert("Not today!")
+            }
+        }
+    </script>
+
+</body>
+</html>
