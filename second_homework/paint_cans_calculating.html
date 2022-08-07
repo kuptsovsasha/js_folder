@@ -27,8 +27,8 @@
       if(length > 1000 || weight > 1000 || height > 1000) {
         return alert("The parameter should be less than 1000");
       }
-      let calculatedVolume = length * weight * height;
-      let numberOfCans = calculatedVolume/paintingOfOneCan;
+      let calculatedArea = ((length * 2 ) + (weight * 2)) * height;
+      let numberOfCans = calculatedArea/paintingOfOneCan;
 
       alert(Math.ceil(numberOfCans));
     }
