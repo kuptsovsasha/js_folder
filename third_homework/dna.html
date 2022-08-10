@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DNA</title>
+</head>
+<body>
+<script>
+  let DNASide = prompt("Put here DNA side").split("");
+
+  for (let i in DNASide) {
+      DNASide[i] === "A" ? DNASide[i] = "T":
+      DNASide[i] === "T" ? DNASide[i] = "A":
+      DNASide[i] === "C" ? DNASide[i] = "G":
+      DNASide[i] === "G" ? DNASide[i] = "C":
+                                      null ;
+  }
+  alert(DNASide.join(""))
+
+</script>
+
+</body>
+</html>
