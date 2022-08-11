@@ -5,19 +5,17 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Painting Line</title>
+    <title>Shortest Word</title>
 </head>
 <body>
   <script>
-    let lineLength = Number(prompt("Type how long line should be?"));
-    let lineSymbol = prompt("Type symbol which you want to use for line");
+    let sentence = prompt("Write your text").split(" ");
 
-
-    while (lineSymbol.length < lineLength) {
-      lineSymbol += lineSymbol;
+    let shortestWord = 100;
+    for (let i of sentence) {
+      if (i.length < shortestWord) { shortestWord = i.length;}
     }
-
-    alert(lineSymbol);
+    alert(shortestWord)
 
   </script>
 

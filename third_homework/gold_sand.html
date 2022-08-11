@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gold Sand</title>
+</head>
+<body>
+<script>
+
+    let goldPrices = prompt("Write 3 prices separate by comma").split(",").sort(function (a, b) {
+        return b - a;
+    });
+    let containersWeight = prompt("Write weight for three containers separate by comma").split(",").sort(function (a, b) {
+        return b - a
+    });
+    if (goldPrices[0] > 100 || containersWeight[0] > 100) {
+        alert("Digits should be less than 100")
+    } else {
+        let totalSum = 0;
+        for (let i in containersWeight) {
+            totalSum += containersWeight[i] * goldPrices[i]
+        }
+        alert(totalSum)
+    }
+
+
+</script>
+</body>
+</html>
