@@ -1,0 +1,35 @@
+
+<!--Написати функцію – калькулятор. Функція приймає рядок з прикладом, визначає, яка дія необхідна виконати (+ - * /), переводить операнди у числа, вирішує приклад та повертає результат.-->
+
+<!--calc(12, 4, '+') //16-->
+<!--calc(1, 4, '-') //-3-->
+<!--calc(12, 5, '/') //2.4-->
+<!--calc(1.2, 3, '*') //3.6-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+</head>
+<body>
+  <script>
+    let arithmeticOperations = {
+      "-": function (a, b) {return a - b},
+      "+": function (a, b) {return a + b},
+      "*": function (a, b) {return a * b},
+      "/": function (a, b) {return a / b},
+    }
+
+   function calc(numb1, numb2, operation){
+     let result = arithmeticOperations[operation](numb1, numb2)
+     alert(result)
+   }
+   calc(1.2, 3, '*')
+
+  </script>
+
+</body>
+</html>

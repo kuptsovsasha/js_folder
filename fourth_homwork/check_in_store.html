@@ -41,7 +41,7 @@
             alert(sumOfCheck)
         }
 
-        function displayMostExpensivePurchase(check) {
+        function displayAveragePrice(check) {
             let count = 0;
             let sumOfItem = 0;
             for (let item of check){
@@ -52,7 +52,7 @@
             alert(sumOfItem/count)
         }
 
-        function displayAveragePrice(check) {
+        function displayMostExpensivePurchase(check) {
             let mostExpensive = 0;
             for (let item of check){
                 +item[2] > mostExpensive ? mostExpensive = +item[2]: null

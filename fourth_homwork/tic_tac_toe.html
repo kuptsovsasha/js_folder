@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+  <script>
+    const board = [ [1, 2, 1],
+                    [2, 0, 2],
+                    [2, 1, 2]];
+
+
+    function findWinner(board) {
+
+      for (let row of board) {
+        for (let item of row) {
+          if (item === 0) return -1;
+        }
+      }
+
+      for (let row = 0; row < 3; row ++) {
+        if (board[row][0] === board[row][1] && board[row][1] === board[row][2] && board[row][0] !== 0) return board[row][0];
+      }
+      for (let col = 0; col < 3; col ++) {
+        if (board[0][col] === board[1][col] && board[1][col] === board[2][col] && board[0][col] !== 0) return board[0][col];
+      }
+
+      if (board[0][0] === board[1][1] && board[1][1] === board[2][2] && board[0][0] !== 0) return board[0][0];
+      if (board[0][2] === board[1][1] && board[1][1] === board[2][0] && board[0][2] !== 0) return board[0][2];
+
+      return 0;
+
+    }
+
+    alert(findWinner(board))
+  </script>
+
+</body>
+</html>

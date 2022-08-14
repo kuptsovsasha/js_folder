@@ -20,10 +20,10 @@
 <body>
 <script>
   let order = prompt("Write your order").split(" ");
-  let sortedOrder = order.sort(compare)
+  let sortedOrder = order.sort(getSortedWords)
   alert(sortedOrder.join(" "))
 
-  function compare(a, b) {
+  function getSortedWords(a, b) {
     a = a.match(/[0-9]/)
     b = b.match(/[0-9]/)
     if (a > b) return 1;
