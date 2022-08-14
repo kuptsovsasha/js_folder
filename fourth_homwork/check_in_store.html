@@ -1,0 +1,66 @@
+<!--//-->
+<!--// Створити масив, який описує чек у магазині. Кожен елемент масиву складається із назви товару, кількості та ціни за одиницю товару. Написати такі функції.-->
+<!--//-->
+<!--//     Роздруківка чека на екран.-->
+<!--//-->
+<!--//     Підрахунок загальної суми покупки.-->
+<!--//-->
+<!--//     Отримання найдорожчої покупки у чеку.-->
+<!--//-->
+<!--//     Підрахунок середньої вартості одного товару у чеку.-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Store Check</title>
+</head>
+<body>
+    <script>
+        const shopCheck = [
+            ["Test", "20", "3"],
+            ["Test1", "21", "4"],
+            ["Test2", "22", "5"],
+            ["Test3", "23", "6"],
+
+        ];
+
+        function displayYourCheck(check) {
+            for (let item of check){
+                alert(`Name=${item[0]}, price=${item[1]}, quantity=${item[2]}`);
+            }
+        }
+
+        function displaySumOfCheck(check) {
+            let sumOfCheck = 0;
+            for (let item of check){
+                sumOfCheck += +item[1] * +item[2];
+            }
+            alert(sumOfCheck)
+        }
+
+        function displayMostExpensivePurchase(check) {
+            let count = 0;
+            let sumOfItem = 0;
+            for (let item of check){
+                sumOfItem += +item[2]
+                count++
+            }
+
+            alert(sumOfItem/count)
+        }
+
+        function displayAveragePrice(check) {
+            let mostExpensive = 0;
+            for (let item of check){
+                +item[2] > mostExpensive ? mostExpensive = +item[2]: null
+            }
+            alert(mostExpensive)
+        }
+
+        displayMostExpensivePurchase(shopCheck)
+    </script>
+</body>
+</html>
