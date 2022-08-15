@@ -24,10 +24,14 @@
     }
 
    function calc(numb1, numb2, operation){
+     alert(numb1)
+     alert(numb2)
+     alert(operation)
      let result = arithmeticOperations[operation](numb1, numb2)
      alert(result)
    }
-   calc(1.2, 3, '*')
+   let inputValue = prompt().split(",")//в спліт вставляємо ці значення (12, 4, "+")
+   calc(inputValue[0], inputValue[1], inputValue[2])
 
   </script>
 
