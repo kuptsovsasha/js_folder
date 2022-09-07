@@ -24,15 +24,19 @@
       if (currentValue.length === 0){
         alert("Please add some two digit number!");
       }
-      if (currentValue.length === 2) {
+      if (Number(currentValue) > 19) {
         alert(numberToText.tens[currentValue[0]] + " " + numberToText.ones[currentValue[1]])
       }
-      if (currentValue.length === 1) {
-        alert(numberToText.ones[currentValue[0]])
+      if (Number(currentValue) < 20 && Number(currentValue) > 9){
+        alert(numberToText.ones[+currentValue])
+      }
+      if (Number(currentValue) < 10) {
+        alert(numberToText.ones[currentValue[0]]);
       }
       if (currentValue.length > 2) {
-        alert("Incorrect number")
+        alert("Incorrect number");
       }
+
 
     });
 
