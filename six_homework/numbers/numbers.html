@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Num to words</title>
+</head>
+<body>
+  <button id="getWord">Get word</button>
+  <input type="number" value="0" id="input"/>
+  <script>
+    const numberToText = {
+      ones: ['', 'один', 'два', 'три', 'чотири', 'пять', 'шість', 'сім', 'вісім', 'девять', 'десять', 'одинадцять', 'дванадцять', 'тринадцять', 'чотирнадцять', 'пятнадцять', 'шістнадцять', 'сімнадцять', 'вісімнадцять', 'девятнадцять'],
+      tens: ['', '', 'двадцять', 'тридцять', 'сорок', 'пятдесят', 'шістдесят', 'сімдесят', 'вісімдесят', 'девносто'],
+    }
+    const getWord = document.getElementById('getWord');
+    const inputField = document.getElementById('input');
+
+    getWord.addEventListener('click', event => {
+
+      let currentValue = inputField.value;
+      if (currentValue.length === 0){
+        alert("Please add some two digit number!");
+      }
+      if (currentValue.length === 2) {
+        alert(numberToText.tens[currentValue[0]] + " " + numberToText.ones[currentValue[1]])
+      }
+      if (currentValue.length === 1) {
+        alert(numberToText.ones[currentValue[0]])
+      }
+      if (currentValue.length > 2) {
+        alert("Incorrect number")
+      }
+
+    });
+
+  </script>
+</body>
+</html>
