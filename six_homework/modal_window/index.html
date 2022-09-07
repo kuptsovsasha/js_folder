@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet">
+    <script defer src="modal_window.js"></script>
+    <title>Modal window</title>
+</head>
+<body>
+  <div class="wrap-center-middle">
+    <h4>Modal window</h4>
+    <button type="button" class="btn btn-lg btn-primary js-modal" data-modal="#modal_1">Open</button>
+  </div>
+  <div id="modal_1" class="modal-window">
+    <div class="modal-window__title">
+      <h3>Hello!</h3>
+      <a href="#" class="modal-close">Close</a>
+    </div>
+  </div>
+<div class="modal-window__backdrop hidden" id="modal-backdrop"></div>
+</body>
+</html>
